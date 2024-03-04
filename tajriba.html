@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Reality Experience</title>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        /* (Yuqoridagi stil kodlari) */
+
+        .content-block {
+            display: none;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+    <script>
+        function showContent(contentId) {
+            var contentBlocks = document.querySelectorAll('.content-block');
+            contentBlocks.forEach(function(block) {
+                block.style.display = 'none';
+            });
+
+            document.getElementById(contentId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+
+    <button onclick="showContent('features')">Xususiyatlarini ko'rsatish</button>
+    <button onclick="showContent('devices')">Moslashtirilgan qurilmalar</button>
+    <button onclick="showContent('contact')">Bog'lanish Formasi</button>
+
+    <section id="features" class="content-block">
+        <h2>Bizning Virtual Reallik</h2>
+<table class="table table-hover">
+            <tr>
+                <th>Xususiyat</th>
+                <th>Tavsif</th>
+            </tr>
+
+            <tr>
+                <td>Interaktiv O'yinlar</td>
+                <td>Vertual muhit bilan o'yinlarni his qiling </td>
+            </tr>
+            <tr>
+                <td>Expeditsiya</td>
+                <td>Yangi olamlarni kashf qiling.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="devices" class="content-block">
+        <h2>Moslashtirilgan Qurilmalar</h2>
+        <ul>
+            <li> Sensorlar va Kameralar: <br> Foydalanuvchining harakatlarini va joylashuvi bilan bog'liq ma'lumotlarni to'plash uchun qo'llaniladi.</li>
+            <li>VR-Tayyor O'yin Konsollari</li>
+            <li>VR Imkoniyatlariga ega bo'lgan PC-lar</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="content-block">
+        <h2>Biz bilan Bog'laning</h2>
+        <form>
+           <li>"Virtual Reality" (VR) texnalogiyasi, odamlarni boshqa joyda bo'lish hissini yaratish uchun kompyuterlar va sensorlar qo'llanilgan texnologiyadir. Bu texnologiyada, foydalanuvchilarga o'zlarini boshqa joyda his qilishlari uchun tasvir vaqtinchalik yaratiladi.</li>
+        </form>
+    </section>
+</body>
+</html>
